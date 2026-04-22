@@ -1,0 +1,239 @@
+Device: cuda
+  GPU: NVIDIA A100-PCIE-40GB
+Results directory: /gpfs/data/fs72129/imansamiei/soroush/legacyGEP/GEPNew/results/elegans_mcc_v1
+
+============================================================
+  Loading training data
+============================================================
+########## Start building garphs from seqs...
+########## Graph Built!
+Species : elegans
+Graphs  : 16741
+Vocab   : 65 k-mers  (k=3)
+Labels  : {1: 670, 0: 16071}  (essential rate: 4.0%)
+
+Model : CustomGAT  |  params: 50,498
+
+============================================================
+  Training
+============================================================
+
+16741 graphs split (stratified): Train=13392, Val=3349
+  Train class counts: {0: 12856, 1: 536}
+  Class weights — non-essential: 0.521, essential: 12.493
+
+########## Training for 100 epochs on cuda...
+- Epoch [001/100] Train Loss: 0.8741 | Train MCC: 0.016 | Train AUC: 0.585 | Val Loss: 0.8751 | Val MCC: 0.219 | Val AUC: 0.761 | Thr: 0.71 | ES: 0/10 | Time: 3.9s
++ New best MCC: 0.2190 @ thr=0.71 (epoch 1)
+- Epoch [002/100] Train Loss: 0.8693 | Train MCC: 0.048 | Train AUC: 0.643 | Val Loss: 0.8810 | Val MCC: 0.229 | Val AUC: 0.766 | Thr: 0.61 | ES: 0/10 | Time: 3.2s
++ New best MCC: 0.2295 @ thr=0.61 (epoch 2)
+- Epoch [003/100] Train Loss: 0.8712 | Train MCC: 0.026 | Train AUC: 0.637 | Val Loss: 0.8655 | Val MCC: 0.238 | Val AUC: 0.756 | Thr: 0.75 | ES: 0/10 | Time: 3.2s
++ New best MCC: 0.2376 @ thr=0.75 (epoch 3)
+- Epoch [004/100] Train Loss: 0.8722 | Train MCC: 0.015 | Train AUC: 0.643 | Val Loss: 0.8782 | Val MCC: 0.245 | Val AUC: 0.752 | Thr: 0.91 | ES: 0/10 | Time: 3.2s
++ New best MCC: 0.2447 @ thr=0.91 (epoch 4)
+- Epoch [005/100] Train Loss: 0.8630 | Train MCC: 0.018 | Train AUC: 0.639 | Val Loss: 0.8607 | Val MCC: 0.266 | Val AUC: 0.780 | Thr: 0.75 | ES: 0/10 | Time: 3.2s
+  Val Confusion Matrix (thr=0.75):
+[[3138   77]
+ [  98   36]]
++ New best MCC: 0.2656 @ thr=0.75 (epoch 5)
+- Epoch [006/100] Train Loss: 0.8509 | Train MCC: 0.045 | Train AUC: 0.684 | Val Loss: 0.9145 | Val MCC: 0.277 | Val AUC: 0.803 | Thr: 0.93 | ES: 0/10 | Time: 3.2s
++ New best MCC: 0.2765 @ thr=0.93 (epoch 6)
+- Epoch [007/100] Train Loss: 0.8547 | Train MCC: 0.039 | Train AUC: 0.661 | Val Loss: 0.8476 | Val MCC: 0.283 | Val AUC: 0.797 | Thr: 0.78 | ES: 0/10 | Time: 3.2s
++ New best MCC: 0.2830 @ thr=0.78 (epoch 7)
+- Epoch [008/100] Train Loss: 0.8580 | Train MCC: 0.043 | Train AUC: 0.691 | Val Loss: 0.8786 | Val MCC: 0.277 | Val AUC: 0.802 | Thr: 0.92 | ES: 0/10 | Time: 3.2s
+- Epoch [009/100] Train Loss: 0.8581 | Train MCC: 0.053 | Train AUC: 0.671 | Val Loss: 0.8671 | Val MCC: 0.269 | Val AUC: 0.794 | Thr: 0.79 | ES: 1/10 | Time: 3.2s
+- Epoch [010/100] Train Loss: 0.8567 | Train MCC: 0.054 | Train AUC: 0.691 | Val Loss: 0.8549 | Val MCC: 0.288 | Val AUC: 0.801 | Thr: 0.85 | ES: 2/10 | Time: 3.2s
+  Val Confusion Matrix (thr=0.85):
+[[3160   55]
+ [ 100   34]]
++ New best MCC: 0.2883 @ thr=0.85 (epoch 10)
+- Epoch [011/100] Train Loss: 0.8504 | Train MCC: 0.063 | Train AUC: 0.694 | Val Loss: 0.8618 | Val MCC: 0.268 | Val AUC: 0.799 | Thr: 0.94 | ES: 0/10 | Time: 3.2s
+- Epoch [012/100] Train Loss: 0.8461 | Train MCC: 0.073 | Train AUC: 0.709 | Val Loss: 0.8497 | Val MCC: 0.281 | Val AUC: 0.821 | Thr: 0.81 | ES: 1/10 | Time: 3.2s
+- Epoch [013/100] Train Loss: 0.8459 | Train MCC: 0.070 | Train AUC: 0.709 | Val Loss: 0.8617 | Val MCC: 0.293 | Val AUC: 0.818 | Thr: 0.86 | ES: 2/10 | Time: 3.2s
++ New best MCC: 0.2931 @ thr=0.86 (epoch 13)
+- Epoch [014/100] Train Loss: 0.8504 | Train MCC: 0.064 | Train AUC: 0.705 | Val Loss: 0.8827 | Val MCC: 0.264 | Val AUC: 0.805 | Thr: 0.94 | ES: 0/10 | Time: 3.2s
+- Epoch [015/100] Train Loss: 0.8538 | Train MCC: 0.058 | Train AUC: 0.699 | Val Loss: 0.8621 | Val MCC: 0.293 | Val AUC: 0.819 | Thr: 0.92 | ES: 1/10 | Time: 3.2s
+  Val Confusion Matrix (thr=0.92):
+[[3173   42]
+ [ 103   31]]
+- Epoch [016/100] Train Loss: 0.8506 | Train MCC: 0.092 | Train AUC: 0.741 | Val Loss: 0.8346 | Val MCC: 0.306 | Val AUC: 0.810 | Thr: 0.78 | ES: 2/10 | Time: 3.2s
++ New best MCC: 0.3059 @ thr=0.78 (epoch 16)
+- Epoch [017/100] Train Loss: 0.8434 | Train MCC: 0.091 | Train AUC: 0.728 | Val Loss: 0.8405 | Val MCC: 0.276 | Val AUC: 0.815 | Thr: 0.87 | ES: 0/10 | Time: 3.2s
+- Epoch [018/100] Train Loss: 0.8430 | Train MCC: 0.083 | Train AUC: 0.727 | Val Loss: 0.8481 | Val MCC: 0.289 | Val AUC: 0.817 | Thr: 0.95 | ES: 1/10 | Time: 3.2s
+- Epoch [019/100] Train Loss: 0.8374 | Train MCC: 0.089 | Train AUC: 0.735 | Val Loss: 0.8403 | Val MCC: 0.283 | Val AUC: 0.809 | Thr: 0.92 | ES: 2/10 | Time: 3.2s
+- Epoch [020/100] Train Loss: 0.8444 | Train MCC: 0.073 | Train AUC: 0.714 | Val Loss: 0.8546 | Val MCC: 0.249 | Val AUC: 0.808 | Thr: 0.92 | ES: 3/10 | Time: 3.2s
+  Val Confusion Matrix (thr=0.92):
+[[3198   17]
+ [ 116   18]]
+- Epoch [021/100] Train Loss: 0.8363 | Train MCC: 0.076 | Train AUC: 0.731 | Val Loss: 0.8406 | Val MCC: 0.320 | Val AUC: 0.821 | Thr: 0.95 | ES: 4/10 | Time: 3.2s
++ New best MCC: 0.3202 @ thr=0.95 (epoch 21)
+- Epoch [022/100] Train Loss: 0.8404 | Train MCC: 0.090 | Train AUC: 0.745 | Val Loss: 0.8351 | Val MCC: 0.298 | Val AUC: 0.816 | Thr: 0.95 | ES: 0/10 | Time: 3.2s
+- Epoch [023/100] Train Loss: 0.8333 | Train MCC: 0.100 | Train AUC: 0.755 | Val Loss: 0.8486 | Val MCC: 0.297 | Val AUC: 0.821 | Thr: 0.92 | ES: 1/10 | Time: 3.2s
+- Epoch [024/100] Train Loss: 0.8397 | Train MCC: 0.083 | Train AUC: 0.733 | Val Loss: 0.8390 | Val MCC: 0.291 | Val AUC: 0.818 | Thr: 0.86 | ES: 2/10 | Time: 3.2s
+- Epoch [025/100] Train Loss: 0.8323 | Train MCC: 0.098 | Train AUC: 0.744 | Val Loss: 0.8594 | Val MCC: 0.288 | Val AUC: 0.827 | Thr: 0.87 | ES: 3/10 | Time: 3.2s
+  Val Confusion Matrix (thr=0.87):
+[[3152   63]
+ [  98   36]]
+- Epoch [026/100] Train Loss: 0.8312 | Train MCC: 0.096 | Train AUC: 0.758 | Val Loss: 0.8314 | Val MCC: 0.299 | Val AUC: 0.822 | Thr: 0.80 | ES: 4/10 | Time: 3.2s
+- Epoch [027/100] Train Loss: 0.8308 | Train MCC: 0.106 | Train AUC: 0.753 | Val Loss: 0.8454 | Val MCC: 0.300 | Val AUC: 0.820 | Thr: 0.83 | ES: 5/10 | Time: 3.2s
+- Epoch [028/100] Train Loss: 0.8350 | Train MCC: 0.113 | Train AUC: 0.761 | Val Loss: 0.8499 | Val MCC: 0.310 | Val AUC: 0.819 | Thr: 0.87 | ES: 6/10 | Time: 3.2s
+- Epoch [029/100] Train Loss: 0.8284 | Train MCC: 0.110 | Train AUC: 0.763 | Val Loss: 0.8466 | Val MCC: 0.299 | Val AUC: 0.823 | Thr: 0.91 | ES: 7/10 | Time: 3.2s
+- Epoch [030/100] Train Loss: 0.8331 | Train MCC: 0.117 | Train AUC: 0.767 | Val Loss: 0.8434 | Val MCC: 0.309 | Val AUC: 0.818 | Thr: 0.88 | ES: 8/10 | Time: 3.2s
+  Val Confusion Matrix (thr=0.88):
+[[3159   56]
+ [  97   37]]
+- Epoch [031/100] Train Loss: 0.8281 | Train MCC: 0.132 | Train AUC: 0.779 | Val Loss: 0.8458 | Val MCC: 0.309 | Val AUC: 0.821 | Thr: 0.87 | ES: 9/10 | Time: 3.2s
+XXXXXXXXXX Early stopping triggered at epoch 31!
+=================================================
+Best val MCC: 0.3202 @ threshold=0.95, epoch 21
+=================================================
+Learning curves saved to: /gpfs/data/fs72129/imansamiei/soroush/legacyGEP/GEPNew/results/elegans_mcc_v1/model_learning_curves.png
+Training history saved.
+
+============================================================
+  Cross-species evaluation
+============================================================
+
+------------------------------------------------------------
+  Testing: melanogaster
+------------------------------------------------------------
+########## Start building garphs from seqs...
+########## Graph Built!
+  7298 graphs | essential rate: 5.7%
+  Decision threshold: 0.9500
+########## Testing on 7298 samples...
+---------- Test Results ----------
+  #Sample: 7298
+  Threshold: 0.95
+  TN: 6867
+  FP: 17
+  FN: 408
+  TP: 6
+  Sensitivity: 0.0145
+  Specificity: 0.9975
+  Precision: 0.2609
+  Recall: 0.0145
+  Accuracy: 0.9418
+  AUC: 0.6144
+  MCC: 0.0496
+----------------------------------
+########## Testing completed.
+  Predictions saved: /gpfs/data/fs72129/imansamiei/soroush/legacyGEP/GEPNew/results/elegans_mcc_v1/predictions_melanogaster.csv
+
+------------------------------------------------------------
+  Testing: sapiens
+------------------------------------------------------------
+########## Start building garphs from seqs...
+########## Graph Built!
+  12015 graphs | essential rate: 12.6%
+  Decision threshold: 0.9500
+########## Testing on 12015 samples...
+---------- Test Results ----------
+  #Sample: 12015
+  Threshold: 0.95
+  TN: 10444
+  FP: 55
+  FN: 1513
+  TP: 3
+  Sensitivity: 0.002
+  Specificity: 0.9948
+  Precision: 0.0517
+  Recall: 0.002
+  Accuracy: 0.8695
+  AUC: 0.5005
+  MCC: -0.0156
+----------------------------------
+########## Testing completed.
+  Predictions saved: /gpfs/data/fs72129/imansamiei/soroush/legacyGEP/GEPNew/results/elegans_mcc_v1/predictions_sapiens.csv
+
+------------------------------------------------------------
+  Testing: arabidopsis
+------------------------------------------------------------
+########## Start building garphs from seqs...
+########## Graph Built!
+  690 graphs | essential rate: 80.0%
+  Decision threshold: 0.9500
+########## Testing on 690 samples...
+---------- Test Results ----------
+  #Sample: 690
+  Threshold: 0.95
+  TN: 138
+  FP: 0
+  FN: 552
+  TP: 0
+  Sensitivity: 0.0
+  Specificity: 1.0
+  Precision: 0.0
+  Recall: 0.0
+  Accuracy: 0.2
+  AUC: 0.4777
+  MCC: 0.0
+----------------------------------
+########## Testing completed.
+  Predictions saved: /gpfs/data/fs72129/imansamiei/soroush/legacyGEP/GEPNew/results/elegans_mcc_v1/predictions_arabidopsis.csv
+
+------------------------------------------------------------
+  Testing: saccharomyces
+------------------------------------------------------------
+########## Start building garphs from seqs...
+########## Graph Built!
+  4622 graphs | essential rate: 20.2%
+  Decision threshold: 0.9500
+########## Testing on 4622 samples...
+---------- Test Results ----------
+  #Sample: 4622
+  Threshold: 0.95
+  TN: 3687
+  FP: 0
+  FN: 935
+  TP: 0
+  Sensitivity: 0.0
+  Specificity: 1.0
+  Precision: 0.0
+  Recall: 0.0
+  Accuracy: 0.7977
+  AUC: 0.5055
+  MCC: 0.0
+----------------------------------
+########## Testing completed.
+  Predictions saved: /gpfs/data/fs72129/imansamiei/soroush/legacyGEP/GEPNew/results/elegans_mcc_v1/predictions_saccharomyces.csv
+
+------------------------------------------------------------
+  Sanity check — train species: elegans
+------------------------------------------------------------
+########## Start building garphs from seqs...
+########## Graph Built!
+  Decision threshold: 0.9500
+########## Testing on 16741 samples...
+---------- Test Results ----------
+  #Sample: 16741
+  Threshold: 0.95
+  TN: 16038
+  FP: 33
+  FN: 584
+  TP: 86
+  Sensitivity: 0.1284
+  Specificity: 0.9979
+  Precision: 0.7227
+  Recall: 0.1284
+  Accuracy: 0.9631
+  AUC: 0.8064
+  MCC: 0.2947
+----------------------------------
+########## Testing completed.
+
+============================================================
+  Summary
+============================================================
+
+Metrics saved: /gpfs/data/fs72129/imansamiei/soroush/legacyGEP/GEPNew/results/elegans_mcc_v1/metrics_all_species.csv
+
+             species  #Sample  Threshold    TN  FP   FN  TP  Sensitivity  Specificity  Precision  Recall  Accuracy    AUC     MCC
+elegans_train_sanity    16741       0.95 16038  33  584  86       0.1284       0.9979     0.7227  0.1284    0.9631 0.8064  0.2947
+        melanogaster     7298       0.95  6867  17  408   6       0.0145       0.9975     0.2609  0.0145    0.9418 0.6144  0.0496
+             sapiens    12015       0.95 10444  55 1513   3       0.0020       0.9948     0.0517  0.0020    0.8695 0.5005 -0.0156
+         arabidopsis      690       0.95   138   0  552   0       0.0000       1.0000     0.0000  0.0000    0.2000 0.4777  0.0000
+       saccharomyces     4622       0.95  3687   0  935   0       0.0000       1.0000     0.0000  0.0000    0.7977 0.5055  0.0000
+
+Total runtime: 6.4 minutes
+All results saved in: /gpfs/data/fs72129/imansamiei/soroush/legacyGEP/GEPNew/results/elegans_mcc_v1

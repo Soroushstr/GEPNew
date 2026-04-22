@@ -1,0 +1,33 @@
+{
+  "data_dir": "/gpfs/data/fs72129/imansamiei/soroush/legacyGEP/GEPNew/data",
+  "train_species": "elegans",
+  "test_species": [
+    "melanogaster",
+    "sapiens",
+    "arabidopsis",
+    "saccharomyces"
+  ],
+  "k": 3,
+  "emb_dim": 128,
+  "hidden_dim": 128,
+  "num_layers": 2,
+  "dropout": 0.2,
+  "pool": "mean",
+  "batch_size": 64,
+  "epoch_n": 100,
+  "learning_rate": 0.001,
+  "use_weighted_loss": 1,
+  "label_smoothing": 0.05,
+  "use_scheduler": 1,
+  "scheduler_patience": 3,
+  "scheduler_factor": 0.5,
+  "use_gradient_clipping": 1,
+  "clip_value": 1.0,
+  "val_split": 0.2,
+  "random_seed": 111,
+  "early_stopping_patience": 10,
+  "early_stopping_min_delta": 0.001,
+  "cm_log_interval": 5,
+  "results_dir": "/gpfs/data/fs72129/imansamiei/soroush/legacyGEP/GEPNew/results",
+  "experiment_name": "elegans_mcc_v1"
+}
